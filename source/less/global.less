@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-Light.eot") format("embedded-opentype"), url("../fonts/Merriweather-Light.woff") format("woff"), url("../fonts/Merriweather-Light.ttf") format("truetype"), url("../fonts/Merriweather-Light.svg") format("svg");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-LightItalic.eot") format("embedded-opentype"), url("../fonts/Merriweather-LightItalic.woff") format("woff"), url("../fonts/Merriweather-LightItalict.ttf") format("truetype"), url("../fonts/Merriweather-LightItalic.svg") format("svg");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-Regular.eot") format("embedded-opentype"), url("../fonts/Merriweather-Regular.woff") format("woff"), url("../fonts/Merriweather-Regular.ttf") format("truetype"), url("../fonts/Merriweather-Regular.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-Italic.eot") format("embedded-opentype"), url("../fonts/Merriweather-Italic.woff") format("woff"), url("../fonts/Merriweather-Italic.ttf") format("truetype"), url("../fonts/Merriweather-Italic.svg") format("svg");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-Bold.eot") format("embedded-opentype"), url("../fonts/Merriweather-Bold.woff") format("woff"), url("../fonts/Merriweather-Bold.ttf") format("truetype"), url("../fonts/Merriweather-Bold.svg") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather";
+  src: url("../fonts/Merriweather-Bold-Italic.eot") format("embedded-opentype"), url("../fonts/Merriweather-Bold-Italic.woff") format("woff"), url("../fonts/Merriweather-Bold-Italic.ttf") format("truetype"), url("../fonts/Merriweather-Bold-Italic.svg") format("svg");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  background-color: @body-color;
+  font-family: @main-font, @web-safe-font, @web-safe-default-font;
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: normal;
+  color: @main-font-color;
+  text-transform: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1;
+  height: 1;
+  margin: -1;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.centering-container {
+  width: 1160px;
+  margin: 0 auto;
+}
