@@ -1,4 +1,7 @@
 .section-title {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 68px;
   text-align: center;
   font-family: @main-font, @web-safe-font, @web-safe-default-font;
   font-size: 30px;
@@ -7,3 +10,14 @@
   line-height: 1.5;
   color: @main-font-color;
 }
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 99px);
+  width: 190px;
+  height: 25px;
+  background: url("../img/title-decoration.png") no-repeat center;
+}
+

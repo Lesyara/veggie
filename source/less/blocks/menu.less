@@ -1,3 +1,87 @@
 .menu {
   background-color: @body-color;
 }
+
+.menu__header {
+  margin: 0;
+  padding-top: 43px;
+  padding-bottom: 86px;
+}
+
+.menu__header::after {
+  bottom: 42px;
+}
+
+.menu__container {
+  padding-bottom: 47px;
+}
+
+.menu__categories {
+  margin-left: auto;
+}
+
+.menu__categories ul {
+  margin: auto;
+}
+
+.menu__categories-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.menu__categories-item {
+  display: inline-block;
+}
+
+.menu__categories-link {
+  text-decoration: none;
+  font-size: 14px;
+  font-family: @main-font, @web-safe-font, @web-safe-default-font;
+  font-weight: 400;
+  color: @main-font-color;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  max-height: 430px;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.menu__item {
+  flex-basis: 60px;
+  width: 500px;
+}
+
+.menu__item-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  font-family: @main-font, @web-safe-font, @web-safe-default-font;
+  font-size: 14px;
+  font-weight: 300;
+  color: @main-font-color;
+  text-transform: uppercase;
+}
+
+.menu__item-header-text {
+  white-space: pre;
+}
+
+.menu__item-dotted-line {
+  width: 100%;
+  border-bottom: 1px dotted @main-font-color;
+}
+
+.menu__item-info {
+  font-family: @main-font, @web-safe-font, @web-safe-default-font;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 300;
+  color: @main-font-color;
+}

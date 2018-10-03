@@ -1,3 +1,147 @@
 .contact {
   background-color: @section-color;
+  background-image: url("../img/footer_back_img_075.jpg"), @section-gradient;
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-size: 1425px auto, 100%;
+}
+
+.contact__header {
+  margin: 0;
+  max-width: 460px;
+  margin-left: auto;
+  padding-top: 40px;
+  padding-bottom: 68px;
+}
+
+.contact__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 445px;
+  margin-left: auto;
+  margin-bottom: 70px;
+}
+
+.contact__item {
+  flex-basis: 175px;
+}
+
+.contact__item-header {
+  margin: 0;
+  padding-bottom: 4px;
+  padding-top: 14px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.contact__item-content a {
+  text-decoration: none;
+  color: @main-font-color;
+}
+
+.contact__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 445px;
+  margin-left: auto;
+  padding-bottom: 143px;
+  justify-content: space-between;
+  font-family: @main-font, @web-safe-font, @web-safe-default-font;
+  font-weight: 300;
+  font-style: normal;
+  color: @main-font-color;
+}
+
+.contact__form-header {
+  width: 100%;
+  margin: 0;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.contact__form-input {
+  min-width: 190px;
+  margin-bottom: 45px;
+}
+
+.contact__form input[type="text"],
+.contact__form input[type="email"] {
+  width: 100%;
+  border: none;
+  padding: 5px 10px;
+  border-bottom: 1px solid @main-font-color;
+  background-color: transparent;
+}
+
+.contact__form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid @main-font-color;
+  background: transparent;
+  resize: none;
+}
+
+.contact__form-message {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.contact__form-send {
+  margin: auto;
+  background-color: transparent;
+  border-color: @main-font-color;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.contact__form input::placeholder {
+  font-style: italic;
+  font-size: 14px;
+  color: @main-font-color;
+}
+
+.contact__form textarea::placeholder {
+  font-style: italic;
+  font-size: 14px;
+  color: @main-font-color;
+}
+
+.contact__form button {
+  padding: 10px 20px;
+  font-size: 14px;
+  color: @main-font-color;
+  cursor: pointer;
+}
+
+.contact__social {
+  display: flex;
+  padding-bottom: 25px;
+}
+
+.contact__social-item {
+  width: 37px;
+  height: 37px;
+  border: 1px solid @main-font-color;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  cursor: pointer;
+
+  &--facebook {
+    margin-left: auto;
+    margin-right: 10px;
+    background-image: url("../img/facebook_icon.png");
+    background-size: 20px auto;
+    background-position: center;
+  }
+
+  &--instagram {
+    margin-right: 22px;
+    background-image: url("../img/instagram_icon.png");
+    background-size: 18px auto;
+    background-position: 50% 55%;
+  }
 }

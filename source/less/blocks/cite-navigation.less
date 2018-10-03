@@ -1,11 +1,11 @@
 .cite-navigation__list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 420px;
   min-height: 85px;
   margin: 0;
-  margin-left: auto;
   padding-left: 0;
   list-style: none;
 }
@@ -27,3 +27,8 @@
 .cite-navigation__link:active {
   border: 1px solid @main-font-color;
 }
+
+.cite-navigation__link--active {
+  border: 1px solid @main-font-color;
+}
+

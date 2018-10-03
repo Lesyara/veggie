@@ -1,3 +1,40 @@
 .about {
   background-color: @section-color;
+  background-image: url("../img/about_us_075.png"), @section-gradient;
+  background-size: 738px auto, 100%;
+  background-position: calc(50% + 369px) 64px, center;
+  background-repeat: no-repeat;
+}
+
+.about__header {
+  max-width: 490px;
+  margin: 0;
+  padding-top: 176px;
+}
+
+.about__header::after {
+  bottom: 26px;
+}
+
+.about__quote {
+  position: relative;
+  max-width: 490px;
+  margin: 0;
+  margin-right: auto;
+  padding-bottom: 270px;
+  font-size: 22px;
+  font-family: @main-font, @web-safe-font, @web-safe-default-font;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.9;
+}
+
+.about__quote::after {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 108px;
+  right: 23px;
+  bottom: 123px;
+  background: url("../img/signature_075.png") no-repeat center;
 }

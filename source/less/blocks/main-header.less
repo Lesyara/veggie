@@ -1,15 +1,30 @@
 .main-header {
-  background-color: @header-color;
+  min-height: 723px;
+  background-color: @section-color;
+  background-image: url("../img/cover_back_img_075.jpg"), @section-gradient;
+  background-size: 1425px auto, 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .main-header__title {
+  padding-top: 303px;
   max-width: 460px;
   margin: 0;
   margin-left: auto;
-  padding-top: 168px;
-  padding-bottom: 330px;
+}
+
+.main-header__navigation-container {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(195, 195, 195, 0.2);
+  z-index: 100;
 }
 
 .main-header__navigation {
   padding-top: 50px;
+}
+
+.main-header__navigation ul {
+  margin-left: auto;
 }
