@@ -10,12 +10,14 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var del = require("del");
-var run = require("run-sequence");
+//var run = require("run-sequence");
 var server = require("browser-sync").create();
 /*var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");*/
 
+var uglify = require('gulp-uglify-es').default;
+var pump = require('pump');
 
 gulp.task("style", function () {
   return gulp.src("source/less/style.less")
@@ -63,33 +65,6 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", function (done) {
-  run(
-    "clean",
-    "copy",
-    "style",
-    "compress",
-    done
-  );
-});
-
-gulp.task("serve", function () {
-  server.init({
-    server: "build/",
-    notify: true,
-    open: true,
-    cors: true,
-    ui: false
-  });
-
-  gulp.watch("source/less/**/*.less", ["style"]);
-  gulp.watch("source/*.html", ["copy"]).on("change", server.reload);
-});
-
-var uglify = require('gulp-uglify-es').default;
-var pump = require('pump');
-
-
 gulp.task('compress', function (cb) {
   pump([
         gulp.src('source/js/*.js'),
@@ -100,3 +75,27 @@ gulp.task('compress', function (cb) {
     cb
   );
 });
+
+gulp.task(
+  "build",
+  gulp.series(
+    "clean",
+    "copy",
+    "style",
+    "compress"
+  )
+);
+
+gulp.task("serve", function () {
+  server.init({
+    server: "build/",
+    notify: true,
+    open: true,
+    cors: true,
+    ui: false
+  });
+
+  gulp.watch("source/less/**/*.less", gulp.series("style"));
+  gulp.watch("source/*.html", gulp.series("copy")).on("change", server.reload);
+});
+
